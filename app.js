@@ -11,10 +11,10 @@ app.use(bodyParser.json());
 
 // MySql
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'rootpass',
-  database: 'node20_mysql'
+        "host":"bxarti5uv4vopmmni1i0-mysql.services.clever-cloud.com",
+        "user":"uq3vruf4b6lbifjl",
+        "password":"GDyQwVjHOTrgS4biT74K",
+        "database":"bxarti5uv4vopmmni1i0"
 });
 
 // Route
@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 
 // all customers
 app.get('/customers', (req, res) => {
-  const sql = 'SELECT * FROM customers';
+  const sql = 'SELECT * FROM empleados';
 
   connection.query(sql, (error, results) => {
     if (error) throw error;
